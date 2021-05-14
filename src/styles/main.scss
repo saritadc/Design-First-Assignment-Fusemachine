@@ -50,7 +50,7 @@ $dark: #212b36;
 
 body {
   background-color: $background;
-  width: 1920px;
+  max-width: 100%;
 }
 header {
   background-color: $primary;
@@ -61,32 +61,29 @@ nav {
 }
 
 .navigation-left {
-  float: left;
-  width: 50%;
-  display: flex;
+  display: inline-flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
-  align-content: center;
+  justify-content: center;
+  align-items: center;
   list-style: none;
-  margin: 0;
+  margin-right: auto;
 }
 
 .navigation-left a,
 .navigation-right a {
   text-decoration: none;
   display: block;
-  padding: 1em;
+  padding: 12px 15px;
   color: white;
 }
 
 .navigation-right {
-  float: right;
-  display: flex;
+  display: inline-flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
-  align-content: center;
+  justify-content: center;
+  align-items: center;
   list-style: none;
-  margin: 0;
+  margin-right: auto;
 }
 
 ul {
@@ -97,7 +94,7 @@ ul {
       text-transform: uppercase;
       outline: none;
       padding: 4px 4px;
-      color:$white;
+      color: $white;
       background-color: $secondary;
     }
   }
@@ -126,6 +123,7 @@ ul {
     width: 512px;
     height: 36px;
     float: left;
+    padding: 12px 15px;
     color: $gray;
     border-radius: 5px;
     font-size: 14px;
@@ -133,7 +131,8 @@ ul {
     line-height: 16px;
     box-sizing: border-box;
     .search-icon {
-      padding: 9px 13px 0px 13px;
+      vertical-align: middle;
+      display: inline-block;
     }
     input[type='text'] {
       border: none;
@@ -192,15 +191,18 @@ ul {
       font-size: 12px;
       .left {
         float: left;
-        display: inline;
         img {
           padding-right: 10px;
+          vertical-align: middle;
+          display: inline-block;
         }
       }
       .right {
         float: right;
         img {
           padding-right: 10px;
+          vertical-align: middle;
+          display: inline-block;
         }
       }
     }

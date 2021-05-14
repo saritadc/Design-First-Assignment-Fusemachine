@@ -39,14 +39,7 @@ $gray: #9ea0a5;
 $grayLighter: #edeff2;
 $grayLight: #c2c2c5;
 $grayDark: #616161;
-
 $dark: #212b36;
-
-// .banner {
-//   height: 500px;
-//   background-color: red;
-//   @include slanted-edge(after, false, 3deg);
-// }
 
 body {
   background-color: $background;
@@ -57,15 +50,28 @@ header {
   height: 60px;
 }
 nav {
-  align-content: center;
+  display: flex;
 }
 
-.navigation-left {
+%navigation-display {
   display: inline-flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   list-style: none;
+}
+%oneline-display {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+%input-layout {
+  border: none;
+  outline: none;
+}
+
+.navigation-left {
+  @extend %navigation-display;
   margin-right: auto;
 }
 
@@ -78,21 +84,16 @@ nav {
 }
 
 .navigation-right {
-  display: inline-flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  margin-right: auto;
+  @extend %navigation-display;
+  margin-left: auto;
 }
 
 ul {
   li {
     button {
+      @extend %input-layout;
       border-radius: 5px;
-      border: none;
       text-transform: uppercase;
-      outline: none;
       padding: 4px 4px;
       color: $white;
       background-color: $secondary;
@@ -117,12 +118,14 @@ ul {
 }
 
 .search-nav {
+  display: flex;
   margin-bottom: 0px;
   height: 36px;
   .search {
     width: 512px;
     height: 36px;
-    float: left;
+    display: inline-flex;
+    margin-right: auto;
     padding: 12px 15px;
     color: $gray;
     border-radius: 5px;
@@ -131,25 +134,24 @@ ul {
     line-height: 16px;
     box-sizing: border-box;
     .search-icon {
-      vertical-align: middle;
-      display: inline-block;
+      @extend %oneline-display;
+      padding-right: 14px;
     }
     input[type='text'] {
-      border: none;
-      outline: none;
+      @extend %input-layout;
     }
   }
 }
 
 .product-button {
-  float: right;
+  display: inline-flex;
+  margin-left: auto;
   button {
+    @extend %input-layout;
     background-color: $green;
     text-transform: uppercase;
     color: $white;
-    border: none;
     border-radius: 5px;
-    outline: none;
     padding: 10px 15px;
   }
 }
@@ -189,20 +191,21 @@ ul {
       margin: auto;
       padding: 16px 0;
       font-size: 12px;
+      display: flex;
       .left {
-        float: left;
+        display: inline-flex;
+        margin-right: auto;
         img {
+          @extend %oneline-display;
           padding-right: 10px;
-          vertical-align: middle;
-          display: inline-block;
         }
       }
       .right {
-        float: right;
+        display: inline-flex;
+        margin-left: auto;
         img {
+          @extend %oneline-display;
           padding-right: 10px;
-          vertical-align: middle;
-          display: inline-block;
         }
       }
     }

@@ -4,16 +4,16 @@
 @import 'helpers/config';
 @import 'helpers/colors';
 // Mixins
-@import 'helpers/mixins/breakpoints';
-@import 'helpers/mixins/clearfix';
-@import 'helpers/mixins/input-placeholder';
-@import 'helpers/mixins/position';
-@import 'helpers/mixins/position-center';
-@import 'helpers/mixins/reset-list';
-@import 'helpers/mixins/hardware-acceleration';
-@import 'helpers/mixins/truncate';
-@import 'helpers/mixins/background-transition';
-@import 'helpers/mixins/slanted-edge';
+// @import 'helpers/mixins/breakpoints';
+// @import 'helpers/mixins/clearfix';
+// @import 'helpers/mixins/input-placeholder';
+// @import 'helpers/mixins/position';
+// @import 'helpers/mixins/position-center';
+// @import 'helpers/mixins/reset-list';
+// @import 'helpers/mixins/hardware-acceleration';
+// @import 'helpers/mixins/truncate';
+// @import 'helpers/mixins/background-transition';
+// @import 'helpers/mixins/slanted-edge';
 
 // ==========================================================================
 // Base Styles
@@ -27,11 +27,197 @@
 // Styles for generic UI components
 // Examples include navbar, dialog boxes, carousels, sidebar etc
 // ==========================================================================
-@import 'components/button';
-@import 'components/checkbox';
+// @import 'components/button';
+// @import 'components/checkbox';
 
-.banner {
-  height: 500px;
-  background-color: teal;
-  @include slanted-edge(after, false, 3deg);
+$primary: #3f51b5;
+$secondary: #26a69a;
+$green: #47b881;
+$background: #f7f7f7;
+$white: #ffffff;
+$gray: #9ea0a5;
+$grayLighter: #edeff2;
+$grayLight: #c2c2c5;
+$grayDark: #616161;
+
+$dark: #212b36;
+
+// .banner {
+//   height: 500px;
+//   background-color: red;
+//   @include slanted-edge(after, false, 3deg);
+// }
+
+body {
+  background-color: $background;
+  width: 1920px;
+}
+header {
+  background-color: $primary;
+  height: 60px;
+}
+nav {
+  align-content: center;
+}
+
+.navigation-left {
+  float: left;
+  width: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: center;
+  list-style: none;
+  margin: 0;
+}
+
+.navigation-left a,
+.navigation-right a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation-right {
+  float: right;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-content: center;
+  list-style: none;
+  margin: 0;
+}
+
+ul {
+  li {
+    button {
+      border-radius: 5px;
+      border: none;
+      text-transform: uppercase;
+      outline: none;
+      padding: 4px 4px;
+      color:$white;
+      background-color: $secondary;
+    }
+  }
+}
+
+.banner-image {
+  margin: 26px 24px;
+  height: 298px;
+  background: linear-gradient(180deg, rgba(22, 101, 216, 0.47017) 0%, #1665d8 100%),
+    url('../templates/images/background.png');
+  background-size: cover;
+  border-radius: 4px;
+}
+
+.content {
+  margin: -80px 24px 40px 294px;
+  .content-logo {
+    margin-bottom: 28px;
+  }
+}
+
+.search-nav {
+  margin-bottom: 0px;
+  height: 36px;
+  .search {
+    width: 512px;
+    height: 36px;
+    float: left;
+    color: $gray;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: $white;
+    line-height: 16px;
+    box-sizing: border-box;
+    .search-icon {
+      padding: 9px 13px 0px 13px;
+    }
+    input[type='text'] {
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.product-button {
+  float: right;
+  button {
+    background-color: $green;
+    text-transform: uppercase;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 15px;
+  }
+}
+
+.items-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 27px;
+  .item-card {
+    background-color: $white;
+    width: 512px;
+    height: 227px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #d2d1d1;
+    margin-top: 24px;
+    color: $gray;
+    text-align: center;
+    line-height: 16px;
+    font-size: 14px;
+    .logo {
+      margin: 23px 0 16px 0;
+    }
+    p:first-of-type {
+      font-size: 18px;
+      font-weight: bold;
+      color: $dark;
+      margin-bottom: 8px;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+    .card-footer {
+      width: 464px;
+      height: 46px;
+      border-top: 1px solid $grayLighter;
+      margin: auto;
+      padding: 16px 0;
+      font-size: 12px;
+      .left {
+        float: left;
+        display: inline;
+        img {
+          padding-right: 10px;
+        }
+      }
+      .right {
+        float: right;
+        img {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  height: 61px;
+  border-top: 1px solid $grayLight;
+  padding-top: 17px;
+  p:nth-child(1) {
+    color: $grayDark;
+    font-size: 14px;
+    padding-bottom: 8px;
+  }
+  p:nth-child(2) {
+    color: $grayLight;
+    font-size: 12px;
+  }
 }

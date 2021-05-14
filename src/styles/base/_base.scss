@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -13,8 +13,13 @@ body {
 a {
   text-decoration: none;
 }
-
-img {
-  height: auto;
-  max-width: 100%;
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
+// img {
+//   height: auto;
+//   max-width: 100%;
+// }

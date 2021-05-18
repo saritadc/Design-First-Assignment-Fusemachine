@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Design assignment</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/24dacea17b.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- Header Starts -->
+    <header>
+      <nav>
+        <ul class="navigation-left">
+          <li>
+            <a href="#"><img src="./images/flex.svg" /></a>
+          </li>
+          <li><a href="#">Devias Kit</a></li>
+          <li>
+            <a href="#"><button>free</button></a>
+          </li>
+        </ul>
+        <ul class="navigation-right">
+          <li>
+            <a href="#"><img src="./images/bell.svg" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./images/icon1.svg" /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Header ends -->
+    <div class="body-container">
+      <!-- sidebar starts -->
+      <aside class="aside">
+        <div class="aside__profile">
+          <img src="./images/setting/profile.png" alt="profile" />
+          <p class="name">Roman Kutepov</p>
+          <p class="position">Brain Director</p>
+        </div>
+        <div class="aside__list">
+          <ul>
+            <li>
+              <a href="#"><img src="./images/setting/dashboard.svg" alt="Dashboard" /> Dashboard</a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/setting/dashboard.svg" alt="Dashboard" />Users</a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/setting/dashboard.svg" alt="Dashboard" />Products</a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/setting/authentication.svg" alt="Dashboard" />Authntication</a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/setting/typography.svg" alt="Dashboard" />Typography</a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/setting/images-items.svg" alt="Dashboard" />Icons and Images</a>
+            </li>
+          </ul>
+        </div>
+        <div class="aside__support">
+          <p>Support</p>
+          <div><img src="./images/setting/support.svg" alt="support" /><span>Support</span></div>
+        </div>
+        <!-- sidebar ends -->
+      </aside>
+      <!-- sidebar ends -->
+      <!-- body content wrapper -->
+      <div class="main-wrapper">
+        <!-- sub header starts -->
+        <header class="sub-header">
+          <ul class="sub-header__list">
+            <li id="profile"><a href="#">Profile</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Price Plans</a></li>
+          </ul>
+        </header>
+        <!-- sub header ends -->
+        <div class="wrapper">
+          <!-- profile starts -->
+          <div class="wrapper__profile">
+            <div class="inner-profile">
+              <div class="inner-profile__name">
+                <h6>Adrian Stefan</h6>
+                <p>Rm. Valcea, Romania</p>
+                <p>4:32PM (GMT-4)</p>
+              </div>
+              <div class="inner-profile__image">
+                <img src="./images/setting/profileImage.png" />
+              </div>
+            </div>
+            <div class="profile-footer">
+              <button>Upload picture</button>
+              <button>Remove picture</button>
+            </div>
+          </div>
+          <!-- profile ends -->
+          <div class="wrapper__form">
+            <div class="basic-profile">
+              <div class="basic-profile__header">
+                <p>Basic profile<span>The information can be edited from yuor profile page</span></p>
+              </div>
+              <div class="basic-profile__container">
+                <form action="" class="basic-profile-form">
+                  <div class="flexbox">
+                    <div class="form__group"><input type="text" placeholder="First Name" /></div>
+                    <div class="form__group"><input type="text" placeholder="Last Name" /></div>
+                  </div>
+                  <div class="flexbox">
+                    <div class="form__group"><input type="email" placeholder="abc@yahoo.com" /></div>
+                    <div class="form__group"><input type="tel" placeholder="0752549328" /></div>
+                  </div>
+                  <div class="flexbox">
+                    <div class="form__group"><input type="text" placeholder="Text" /></div>
+                    <div class="form__group"><input type="text" placeholder="Text" /></div>
+                  </div>
+                  <div class="save-btn">
+                    <button>Save Setting</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="notification">
+              <div class="basic-profile__header">
+                <p>Notifications<span>The information can be edited from yuor profile page</span></p>
+              </div>
+              <div class="notification__container">
+                <div class="notifications">
+                  <p>Notifications</p>
+                  <form action="">
+                    <div class="input">
+                      <input type="checkbox" id="email" name="email" value="Email" />
+                      <label for="email"> Email</label>
+                    </div>
+                    <div class="input">
+                      <input
+                        type="checkbox"
+                        id="push-notificactions"
+                        name="push-notificactions"
+                        value="Push Notificactions"
+                      />
+                      <label for="push-notificactions"> Push Notificactions</label>
+                    </div>
+                    <div class="input">
+                      <input type="checkbox" id="text-messages" name="text-messages" value="Text messages" />
+                      <label for="text-messages"> Text Messages</label>
+                    </div>
+                    <div class="input">
+                      <input type="checkbox" id="phone-calls" name="phone-calls" value="phone-calls" />
+                      <label for="phone-calls"> Phone Calls</label>
+                    </div>
+                  </form>
+                </div>
+                <div class="messages">
+                  <p>Messages</p>
+                  <form action="">
+                    <div class="input">
+                      <input type="checkbox" id="email" name="email" value="Email" />
+                      <label for="email"> Email</label>
+                    </div>
+                    <div class="input">
+                      <input
+                        type="checkbox"
+                        id="push-notificactions"
+                        name="push-notificactions"
+                        value="Push Notificactions"
+                      />
+                      <label for="push-notificactions"> Push Notificactions</label>
+                    </div>
+                    <div class="input">
+                      <input type="checkbox" id="text-messages" name="text-messages" value="Text messages" />
+                      <label for="text-messages"> Text Messages</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="save">
+                <button>Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

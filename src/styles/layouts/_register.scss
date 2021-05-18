@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  width: 70%;
+  flex-direction: row;
+  background: white;
+  margin: 8% auto;
+  border-radius: 5px;
+  .form {
+    width: 50%;
+    padding: 55px 65px;
+  }
+}
+.form-image {
+  width: 100%;
+  border-radius: 0 5px 5px 0px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 53.09%, rgba(0, 0, 0, 0.37276) 100%),
+    url('../templates/images/login_background.png');
+  background-size: cover;
+  background-position: center;
+}
+.navigation {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  color: #9ea0a5;
+  padding-bottom: 24px;
+  .form__navigation-left {
+    margin-right: auto;
+    img {
+      padding-right: 5px;
+    }
+  }
+  .form__navigation-right {
+    margin-left: auto;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+.form__title {
+  line-height: 30px;
+
+  h6 {
+    font-size: 24px;
+  }
+  p {
+    color: #9ea0a5;
+  }
+}
+
+.form__group input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='submit'],
+input[type='tel'] {
+  width: 100%;
+  color: #9ea0a5;
+  line-height: 25px;
+  margin: 16px 0px;
+  border-radius: 5px;
+  border: 2px solid #9ea0a5;
+  padding: 13px;
+  outline: none;
+  &:hover {
+    border-color: #3c7fd6;
+  }
+  &:visited,
+  &:focus {
+    border-color: #19397c;
+  }
+}
+
+.form__group input[type='submit'] {
+  background: #1665d8;
+  color: #fff;
+}
+.form__group input[type='checkbox'] {
+  display: inline-block;
+}
+
+.form__group span {
+  color: #9ea0a5;
+  a {
+    color: #666668;
+    text-decoration: underline;
+  }
+}
+.image-content {
+  margin-top: 90%;
+  p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .img-profile {
+    padding-top: 16px;
+
+    .customer,
+    img {
+      vertical-align: middle;
+      display: inline-block;
+      padding-right: 12px;
+    }
+  }
+}

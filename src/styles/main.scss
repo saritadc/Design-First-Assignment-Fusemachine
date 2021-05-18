@@ -29,6 +29,8 @@
 // ==========================================================================
 // @import 'components/button';
 // @import 'components/checkbox';
+@import 'layouts/register';
+@import 'layouts/setting';
 
 $primary: #3f51b5;
 $secondary: #26a69a;
@@ -41,6 +43,10 @@ $grayLight: #c2c2c5;
 $grayDark: #616161;
 $dark: #212b36;
 
+/***********
+ * index page *
+ ***********/
+
 body {
   background-color: $background;
   max-width: 100%;
@@ -52,7 +58,9 @@ header {
 nav {
   display: flex;
 }
-
+.title {
+  background-color: red;
+}
 %navigation-display {
   display: inline-flex;
   flex-flow: row wrap;
@@ -69,7 +77,6 @@ nav {
   border: none;
   outline: none;
 }
-
 .navigation-left {
   @extend %navigation-display;
   margin-right: auto;
@@ -222,5 +229,47 @@ footer {
   p:nth-child(2) {
     color: $grayLight;
     font-size: 12px;
+  }
+}
+.form-side-image {
+  width: 100%;
+  background-image: url('../templates/images/login_background.png') no-repeat center;
+  background-size: cover;
+}
+
+/***********
+ * notification page *
+ ***********/
+
+.main-notification {
+  width: 17.7%;
+  margin: auto;
+  padding: 5px;
+  margin-top: 10%;
+  background: #fff;
+}
+.items-container {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  border-bottom: 1px solid $grayLighter;
+  .item-message {
+    flex-grow: 3;
+    width: 25%;
+
+    p:nth-child(1) {
+      color: $grayDark;
+      font-size: 14px;
+      padding-bottom: 8px;
+    }
+    p:nth-child(2) {
+      color: $grayLight;
+      font-size: 12px;
+    }
+  }
+  .item-icon {
+    flex-grow: 1;
   }
 }

@@ -1,4 +1,4 @@
-<!-- # Scalable SASS Architecture
+# Scalable SASS Architecture
 
 ## Prerequisites
 
@@ -45,4 +45,4 @@ Prettify files:
 
 ```bash
 yarn prettier
-``` -->
+```
